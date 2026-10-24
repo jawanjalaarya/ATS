@@ -1,0 +1,27 @@
+FROM node:20-slim
+
+# Create non-root user for security (UID/GID 1000)
+RUN groupadd -r -g 1000 app && useradd -r -u 1000 -g app app
+
+# Set working directory
+WORKDIR /app
+
+# Install dependencies with frozen lockfile for reproducibility
+COPY package.json package-lock.json ./
+RUN npm ci
+
+# Copy source code
+COPY . .
+
+# Set ownership to app user
+RUN chown -R app:app /app
+
+# Expose Vite dev server port
+EXPOSE 5173
+
+# Switch to non-root user
+USER app
+
+# Start Vite dev server with host binding for container access
+# The ./frontend/src:/app/src bind mount enables HMR for development
+CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]

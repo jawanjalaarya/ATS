@@ -1,0 +1,90 @@
+{
+  "machine learning": [
+    "ml",
+    "machine learning",
+    "deep learning",
+    "dl",
+    "neural networks",
+    "artificial intelligence",
+    "ai"
+  ],
+  "python": [
+    "python",
+    "python3",
+    "py"
+  ],
+  "javascript": [
+    "javascript",
+    "js",
+    "ecmascript",
+    "es6"
+  ],
+  "typescript": [
+    "typescript",
+    "ts"
+  ],
+  "react": [
+    "react",
+    "reactjs",
+    "react.js"
+  ],
+  "node.js": [
+    "node.js",
+    "nodejs",
+    "node"
+  ],
+  "docker": [
+    "docker",
+    "containerization"
+  ],
+  "kubernetes": [
+    "kubernetes",
+    "k8s"
+  ],
+  "sql": [
+    "sql",
+    "postgresql",
+    "postgres",
+    "mysql",
+    "relational database"
+  ],
+  "no-sql": [
+    "nosql",
+    "mongodb",
+    "mongo",
+    "redis",
+    "dynamodb"
+  ],
+  "aws": [
+    "aws",
+    "amazon web services"
+  ],
+  "azure": [
+    "azure",
+    "microsoft azure"
+  ],
+  "gcp": [
+    "gcp",
+    "google cloud",
+    "google cloud platform"
+  ],
+  "git": [
+    "git",
+    "version control",
+    "github",
+    "gitlab"
+  ],
+  "ci/cd": [
+    "ci/cd",
+    "continuous integration",
+    "continuous deployment",
+    "github actions",
+    "jenkins",
+    "gitlab ci"
+  ],
+  "agile": [
+    "agile",
+    "scrum",
+    "kanban"
+  ]
+}

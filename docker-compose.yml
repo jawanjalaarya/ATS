@@ -1,0 +1,49 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      # Persistent SQLite database (named volume for data durability)
+      - ats_db_data:/app/data
+      # Persistent resume upload storage
+      - ats_resume_uploads:/app/data/uploads
+    env_file:
+      - .env
+    restart: unless-stopped
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"
+        ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.dev
+    ports:
+      - "5173:5173"
+    volumes:
+      # Bind mount src for hot module reloading (HMR) per D-14
+      - ./frontend/src:/app/src:ro
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  # Named volumes for data persistence per D-13
+  ats_db_data:
+    driver: local
+  ats_resume_uploads:
+    driver: local

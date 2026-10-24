@@ -1,0 +1,67 @@
+{
+  "categories": {
+    "technical": {
+      "description": "Technical skill-based questions",
+      "questions": [
+        {"keywords": ["python", "django", "flask", "fastapi"], "text": "Describe a complex Python application you built. What architectural decisions did you make and why?"},
+        {"keywords": ["python", "testing", "pytest"], "text": "How do you approach testing in Python? Walk me through your testing strategy for a production service."},
+        {"keywords": ["javascript", "typescript", "react", "vue", "angular"], "text": "Explain how you handle state management in frontend applications. What patterns have worked best for you?"},
+        {"keywords": ["react", "next", "frontend"], "text": "Describe a performance optimization you implemented in a React application. What was the measurable impact?"},
+        {"keywords": ["sql", "database", "postgresql", "mysql"], "text": "How do you approach database schema design for a new feature? Walk through your process from requirements to implementation."},
+        {"keywords": ["api", "rest", "graphql", "microservices"], "text": "Describe how you would design an API for a service that needs to handle millions of requests daily."},
+        {"keywords": ["docker", "kubernetes", "devops", "ci/cd"], "text": "Walk me through your approach to containerizing an application and setting up its deployment pipeline."},
+        {"keywords": ["machine learning", "ai", "data science", "ml"], "text": "Describe a machine learning project you worked on. How did you validate your model's performance?"},
+        {"keywords": ["java", "spring", "jvm"], "text": "How do you handle concurrency and thread safety in Java applications?"},
+        {"keywords": ["cloud", "aws", "azure", "gcp"], "text": "Describe a cloud architecture you designed. How did you handle scalability and cost optimization?"},
+        {"keywords": ["security", "authentication", "encryption"], "text": "How do you approach security in your applications? Describe a security challenge you solved."},
+        {"keywords": ["mobile", "ios", "android", "flutter", "react native"], "text": "What unique challenges have you encountered in mobile development compared to web development?"}
+      ]
+    },
+    "behavioral": {
+      "description": "Behavioral and soft-skill questions",
+      "questions": [
+        {"keywords": [], "text": "Tell me about a time you had to resolve a significant disagreement within your team. What was the outcome?"},
+        {"keywords": [], "text": "Describe a situation where you had to deliver difficult feedback to a colleague. How did you approach it?"},
+        {"keywords": [], "text": "Tell me about a project that failed or didn't meet expectations. What did you learn?"},
+        {"keywords": [], "text": "Describe a time you had to quickly learn a new technology or domain to complete a project."},
+        {"keywords": [], "text": "How do you prioritize when you have multiple urgent tasks competing for your attention?"},
+        {"keywords": [], "text": "Tell me about a time you went above and beyond your role to help your team succeed."}
+      ]
+    },
+    "project": {
+      "description": "Project-based and problem-solving questions",
+      "questions": [
+        {"keywords": [], "text": "Walk me through a project you're most proud of. What was your specific contribution?"},
+        {"keywords": [], "text": "Describe a time you had to make a significant technical trade-off. What factors did you consider?"},
+        {"keywords": [], "text": "Tell me about a time you improved an existing system significantly. What metrics showed the improvement?"},
+        {"keywords": [], "text": "Describe a project where requirements changed significantly mid-development. How did you adapt?"},
+        {"keywords": [], "text": "Walk me through how you would approach building a system from scratch given ambiguous requirements."}
+      ]
+    },
+    "role_specific": {
+      "description": "Questions tailored to the job role and level",
+      "questions": [
+        {"keywords": ["senior", "lead", "architect", "staff"], "text": "How do you mentor junior engineers? Give an example of how you helped someone grow technically."},
+        {"keywords": ["senior", "lead", "architect"], "text": "Describe how you make architectural decisions that affect multiple teams."},
+        {"keywords": ["junior", "entry", "intern", "graduate"], "text": "What strategies do you use to learn new codebases quickly?"},
+        {"keywords": ["junior", "entry", "intern", "graduate"], "text": "Describe a personal project that demonstrates your passion for software development."},
+        {"keywords": ["manager", "lead", "director"], "text": "How do you balance technical debt against new feature delivery?"},
+        {"keywords": ["frontend", "ui", "ux", "design"], "text": "How do you ensure your implementations match design specifications while maintaining accessibility?"},
+        {"keywords": ["backend", "infrastructure", "platform"], "text": "How do you approach monitoring and observability for services you build?"},
+        {"keywords": ["fullstack", "full-stack"], "text": "How do you decide where to put business logic — frontend, backend, or shared?"},
+        {"keywords": [], "text": "What aspects of this role are you most excited about, and where do you see the biggest challenges?"}
+      ]
+    }
+  },
+  "generation_rules": {
+    "total_questions": 5,
+    "distribution": {
+      "technical": 2,
+      "behavioral": 1,
+      "project": 1,
+      "role_specific": 1
+    },
+    "selection_strategy": "keyword_match_first_then_random",
+    "notes": "D-08: Generate a balanced set of 5 questions (2 technical, 1 behavioral, 1 project-based, 1 role-specific)"
+  }
+}

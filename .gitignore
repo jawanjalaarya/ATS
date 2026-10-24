@@ -1,0 +1,81 @@
+# Agent and planning directories (kept in repo via -f)
+.agents/
+.kiro/
+.planning/
+
+# Environment files (keep .env.example, exclude actual secrets)
+.env
+.env.local
+.env.*.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.log
+.Python
+backend/.pytest_cache/
+backend/htmlcov/
+backend/.coverage
+backend/coverage.xml
+backend/.mypy_cache/
+backend/venv/
+backend/.venv/
+
+# SQLite database files (use Docker volumes in deployment)
+*.db
+*.sqlite3
+# Exception: keep the migration-created data directory marker
+!backend/data/.gitkeep
+
+# Node.js / Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/coverage/
+
+# Docker
+docker-compose.override.yml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# AI Assistants
+.gemini/
+.cline/
+.cursor/
+.codex/
+.codeium/
+.codebuddy/
+.trae/
+
+# App Data
+backend/uploads/
+
+# NPM Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+cookies.txt
+cookies_test.txt
+backend/app/data/resumes/
+.env
+**/.env
